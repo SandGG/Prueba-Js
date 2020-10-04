@@ -4,46 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="formulario.js"></script>
-    <link href="estilo.css" type="text/css" rel="stylesheet">
+    <script src="modificar.js"></script>
 </head>
 <body>
-    
-    <form class="form" id="form">
-        <p>Conocé que tanto sabes de Tacolandia</p>
-        <label class="form__label">Nombre: <input class="form__input" type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required></label><br><br>
-        <label class="form__label">1. Comida mexicana:</label><br>
-        <label class="form__label"><input class="form__input" type="checkbox" id="comi1" value="Tacos">Tacos</label><br>
-        <label class="form__label"><input class="form__input" type="checkbox" id="comi2" value="Gorditas">Gorditas</label><br>
-        <label class="form__label"><input class="form__input" type="checkbox" id="comi3" value="Hot cakes">Hot cakes</label><br>
-        <label class="form__label"><input class="form__input" type="checkbox" id="comi4" value="Rollitos primavera">Rollitos primavera</label><br><br>
-        <label class="form__label">2. ¿Cuantos estados tiene México?</label><br>    
-        <input class="form__input" type="number" min=1 max=99 id="numEst" value="numEst"> <br><br>
-        <label class="form__label">3. ¿Qué significa México?</label><br>
-        <label class="form__label"><input class="form__input" type="radio" id="sig1" value="significado" name="significado">Ombligo de la Luna</label><br>
-        <label class="form__label"><input class="form__input" type="radio" id="sig2" value="significado" name="significado">Águila Real</label><br>
-        <label class="form__label"><input class="form__input" type="radio" id="sig3" value="significado" name="significado">Aguas de nopal</label><br><br>
-        <label class="form__label">4. México es uno de los países con más:</label><br>
-        <select class="form__select" name="select" id="opc">
-            <option value="Biodiversidad" id="value1"selected>Biodiversidad</option> 
-            <option value="Bioculturidad" id="value2">Bioculturidad</option>
-            <option value="Especies amenazadas" id="value3">Especies amenazadas</option>
-            <option value="Todas las anteriores" id="value4">Todas las anteriores</option>
-        </select><br><br>
-        <label class="form__label">5. ¿Qué águila es la que esta en la bandera?</label><br>
-        <label class="form__label"><input class="form__input" type="radio" id="agui1" value="aguila" name="aguila">Águila Calva</label><br>
-        <label class="form__label"><input class="form__input" type="radio" id="agui2" value="aguila" name="aguila">Águila Real</label><br>
-        <label class="form__label"><input class="form__input" type="radio" id="agui3" value="aguila" name="aguila">Aguila audax</label><br><br>
-        <input class="form__button" type="reset" value="Restablecer"/>
-        <input class="form__button  form__button--resp" href="#ejem1" type="submit" name="calif" id="calif" value="Calificar" onclick="calificar()"/>
-        <div id="resp" class="form__resp">
-            <p>Respuestas</p>
-            <p>1. Tacos y gorditas</p>
-            <p>2. 32</p>
-            <p>3. Ombligo de la Luna</p>
-            <p>4. Todas las anteriores</p>
-            <p>5. Águila real</p>
+    <div id="conteiner">
+        <p id="title">Titulo del texto</p>
+        <p id="conteiner__first">1. Primer Texto Texto Texto Texto Texto Texto Texto Texto Texto
+            Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+            Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+            Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+        </p>
+        <p id="conteiner__second">2. Segundo Texto Texto Texto Texto Texto Texto Texto Texto Texto
+            Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+            Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+            Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+        </p>
+        <div>
+            <!--Input con onClick todo bien-->
+            <input id="button_Title" type="button" value="Cambiar titulo" onclick="changeTitle()">
+            <!--Input en espera del event con valor null-->
+            <input id="button_First" type="button" value="Cambiar primer parrafo">
+            <input id="button_Second" type="button" value="Cambiar segundo parrafo">
+            <input id="button_Style" type="button" value="Agregar estilo">
         </div>
-    </form>
+    </div> 
 </body>
 </html>
