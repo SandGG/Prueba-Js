@@ -1,9 +1,9 @@
 var aciertos = 0, calif = 0, persona, resp;
 
 function show(){
-    /*resp = document.getElementById('resp');
+    resp = document.getElementById('resp');
     resp.style.display = 'block';
-    alert("entra");*/
+    alert("entra");
 }
 
 function calificar(){

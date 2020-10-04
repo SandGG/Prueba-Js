@@ -27,12 +27,12 @@ body {
   cursor: pointer;
   border-radius: 12px;
   padding: 8px;
+  /*&--resp:focus~.form__resp{
+      display: block;
+  }*/
 }
 .form__input:hover, .form__input:focus, .form__select:hover, .form__select:focus, .form__button:hover, .form__button:focus {
   background: #e9dfe7;
-}
-.form__input--resp:focus ~ .form__resp, .form__select--resp:focus ~ .form__resp, .form__button--resp:focus ~ .form__resp {
-  display: block;
 }
 
 #resp {
