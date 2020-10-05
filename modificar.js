@@ -1,10 +1,10 @@
 //console.log("Entra");
 
-window.onload = function(){
+window.onload = function (){
     var titulo = document.querySelector('#button_Title');
     titulo.addEventListener("click",changeTitle);
     var primero = document.querySelector('#button_First');
-    primero.addEventListener("click",changeFisrt);
+    primero.addEventListener("click",changeFirst);
     var segundo = document.querySelector('#button_Second');
     segundo.addEventListener("click",changeSecond);
     var estilo = document.querySelector('#button_Style');
@@ -16,7 +16,7 @@ function changeTitle(){
     titulo.innerHTML = "Nuevo Titulo del Texto";
 }
 
-function changeFisrt(){
+function changeFirst(){
     primero = document.querySelector('#conteiner__first');
     primero.innerHTML = "1. Nuevo Texto del primer parrafo";
 }
