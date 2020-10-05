@@ -1,0 +1,23 @@
+body {
+  background: pink;
+  display: flex;
+  justify-content: center;
+}
+
+#conteiner {
+  border: 1px solid black;
+  padding: 5px;
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#conteiner > div {
+  width: 33.3333333333%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+/*# sourceMappingURL=estilo.css.map */
