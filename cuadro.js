@@ -1,20 +1,18 @@
 var elementoDiv = document.getElementsByTagName('div');
-var i = 1, time = 1000, conta = 1;
+var i = 1;
 
 cuadrosCiclo();
 
 function cuadrosCiclo() {
-    for (var j = 1; j < elementoDiv.length; j++) {
-        setTimeout(cambiarColor,(time*conta));
-        conta++;
-        setTimeout(volverColor,(time*conta));
-    }
-    i = 1;
-    setTimeout(cuadrosCiclo,(time*conta));;
+    setInterval(cambiarColor,(1000));
+    setInterval(volverColor,(2000));
 }
 
 function cambiarColor() {
     console.log(i);
+    if(i == elementoDiv.length) {
+        i = 1;
+    }
     elementoDiv[i].style.cssText = 'background-color: coral;';
 }
 
