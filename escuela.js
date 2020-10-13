@@ -1,6 +1,7 @@
 var alu = document.querySelector('#button_alu');
 var mat = document.querySelector('#button_mat');
 var calif = document.querySelector('#button_calif');
+var objAlu, objMat, objCalif;
 
 alu.addEventListener("click",function(){openTab("alumnos")});
 mat.addEventListener("click",function(){openTab("materia")});
@@ -99,7 +100,7 @@ function capturarCalif() {
     calif3 = document.querySelector('#cal3').value;
 
     if (califNum != '' && califClave != '') {
-        objMat = new Calif (califNum, califClave, calif1, calif2, calif3);
+        objCalif = new Calif (califNum, califClave, calif1, calif2, calif3);
         buscarDatos();
     } else {
        console.log('campo vacio'); 
