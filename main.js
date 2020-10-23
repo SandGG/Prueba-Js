@@ -42,7 +42,8 @@ const button_search = document.querySelector('#button_search-edit').addEventList
                 document.querySelector('#edit_telefono').value = listAgenda[i].telefono;
                 document.querySelector('#edit_ocupacion').value = listAgenda[i].ocupacion;
                 const button_edit = document.querySelector('#edit').addEventListener('click', function() {editar(i)});
-                return anun.innerHTML = ''; 
+                anun.innerHTML = ''; 
+                break;
             } else if (i == listAgenda.length-1) {
                 anun.innerHTML = 'Nombre no encontrado';
             } 
@@ -65,7 +66,8 @@ const button_delete = document.querySelector('#button_search-delete').addEventLi
                 document.querySelector('#delete_telefono').value = listAgenda[i].telefono;
                 document.querySelector('#delete_ocupacion').value = listAgenda[i].ocupacion;
                 const button_eliminar = document.querySelector('#delete').addEventListener('click', function() {eliminar(i)});
-                return anun.innerHTML = ''; 
+                anun.innerHTML = ''; 
+                break;
             } else if (i == listAgenda.length-1) {
                 anun.innerHTML = 'Nombre no encontrado';
             } 
