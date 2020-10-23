@@ -1,0 +1,93 @@
+$letra-tipo: Arial;
+$letra-tam: 14px;
+$tamaño: (100%/3);
+
+%texto-shared { 
+    font-family: $letra-tipo;
+    font-size: $letra-tam;
+}
+
+%style-shared {
+    background: rgb(197, 192, 192);
+    font-weight: 700;
+}
+
+body {
+    background: rgb(192, 196, 253);
+}
+
+.container {
+    width: 80%; 
+    margin: 0 auto;
+
+    &__bar {
+        background: white;
+        margin-bottom: 13px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__button {
+        @extend %texto-shared;
+        background: white;
+        border: none;
+        outline:none;
+        padding: 12px;
+        width: $tamaño;
+        cursor: pointer;
+
+        &:hover {
+            @extend %style-shared;
+        }
+    }
+}
+
+.tabs {
+    display: none;
+    @extend %texto-shared;
+
+    &--main {
+        display: block; 
+    }
+}
+
+.form {
+    background: rgb(216, 216, 203);
+    padding: 12px;
+    margin-bottom: 12px;
+
+    &__label {
+        @extend %texto-shared;
+    } 
+
+    &__input { 
+        @extend %texto-shared;
+        padding: 8px;
+        outline: none;
+        border: 0;
+
+        &--button {
+            width: 20%;
+            background: white;
+            cursor: pointer;
+
+            &:hover {
+                @extend %style-shared;
+            }
+        }
+    }
+}
+
+.table {
+    width: 100%;
+    @extend %style-shared;
+    padding: 12px;
+
+    &__td {
+        padding: 12px;
+    }
+
+    &__tr:hover {
+        background: wheat;
+    }
+}

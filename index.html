@@ -3,64 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escuela</title>
-    <link href="estilo.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+    <link href="estilo.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="container__bar">
-            <input type="button" id="button_alu" class="container__button " value="Alumnos">
-            <input type="button" id="button_mat" class="container__button" value="Materia">
-            <input type="button" id="button_calif" class="container__button" value="Calificaciones">
+            <input type="button" id="button_add" class="container__button " value="Agregar">
+            <input type="button" id="button_edit" class="container__button" value="Editar">
+            <input type="button" id="button_delete" class="container__button" value="Eliminar">
+            <input type="button" id="button_list" class="container__button" value="Listar">
         </div>
-        <div id="alumnos" class="tabs tabs--main">
-            <div class="form">
-                <label class="form__label">Nombre: <input class="form__input" type="text" id="aluNombre" name="nombre"></label><br><br>
-                <label class="form__label">No. control: <input class="form__input" type="number" id="aluNumControl" name="nombre"></label><br><br>
-                <label class="form__label">Semestre: <input class="form__input" type="number" id="aluSem" name="nombre" min="1" max="12"></label><br><br>
-                <input class="form__input form__input--button" type="submit" id="agregarAlu" value="Enviar" name="enviar">
+        <div class="container__tabs">
+            <div class="tabs tabs--main" id="agregar">
+                <h1>AGREGAR</h1>
+                <p class="anuncio anuncio--add"></p>
+                <div class="form">
+                    <label class="form__label">Nombre: <input class="form__input" type="text" id="add_nombre" name="nombre" placeholder="Ingresa el nombre"></label><br><br>
+                    <label class="form__label">Apellido: <input class="form__input" type="text" id="add_apellido" name="apellido" placeholder="Ingresa el apellido"></label><br><br>
+                    <label class="form__label">Telefono: <input class="form__input" type="number" id="add_telefono" name="telefono" placeholder="Ingresa el telefono"></label><br><br>
+                    <label class="form__label">Ocupación: <input class="form__input" type="text" id="add_ocupacion" name="ocupacion" placeholder="Ingresa la ocupación"></label><br><br>
+                    <input class="form__button" type="submit" name="add" id="add" value="Agregar"/> 
+                </div>
+                </div>
+            <div class="tabs" id="editar">
+                <h1>EDITAR</h1>
+                <p class="anuncio anuncio--edit"></p>
+                <div class="form">
+                    <label class="form__label">Nombre: <input class="form__input" type="text" id="edit_nombre" name="nombre" placeholder="Ingresa el nombre"></label><br><br>
+                    <input class="form__button" id="button_search-edit" type="submit" name="search" value="Buscar">
+                    <div class="form form--hidden" id="edit_edit">
+                        <label class="form__label">Apellido: <input class="form__input" type="text" id="edit_apellido" name="apellido" placeholder="Ingresa el apellido"></label><br><br>
+                        <label class="form__label">Telefono: <input class="form__input" type="number" id="edit_telefono" name="telefono" placeholder="Ingresa el telefono"></label><br><br>
+                        <label class="form__label">Ocupación: <input class="form__input" type="text" id="edit_ocupacion" name="ocupacion" placeholder="Ingresa la ocupación"></label><br><br>
+                        <input class="form__button" type="submit" name="edit" id="edit" value="Editar"/>
+                    </div>
+                </div>
             </div>
-            <table id="aluTabla" class="table">
-                <tr>
-                    <td>Nombre</td>
-                    <td>No. Control</td>
-                    <td>Semestre</td>
-                </tr>
-            </table>
-        </div>
-        <div id="materia" class="tabs"> 
-            <div class="form">
-                <label class="form__label">Nombre: <input class="form__input" type="text" id="matNombre" name="nombre"></label><br><br>
-                <label class="form__label">Clav. Materia: <input class="form__input" type="number" id="matClave" name="nombre"></label><br><br>
-                <input class="form__input form__input--button" type="submit" id="agregarMat" value="Enviar" name="enviar">
+            <div class="tabs" id="eliminar">
+                <h1>ELIMINAR</h1>
+                <p class="anuncio anuncio--delete"></p>
+                <div class="form">
+                    <label class="form__label">Nombre: <input class="form__input" type="text" id="delete_nombre" name="nombre" placeholder="Ingresa el nombre"></label><br><br>
+                    <input class="form__button" id="button_search-delete" type="submit" value="Buscar">
+                    <div class="form form--hidden" id="delete_delete">
+                        <label class="form__label">Apellido: <input class="form__input" type="text" id="delete_apellido" name="apellido" placeholder="Ingresa el apellido" disabled></label><br><br>
+                        <label class="form__label">Telefono: <input class="form__input" type="number" id="delete_telefono" name="telefono" placeholder="Ingresa el telefono" disabled></label><br><br>
+                        <label class="form__label">Ocupación: <input class="form__input" type="text" id="delete_ocupacion" name="ocupacion" placeholder="Ingresa la ocupación" disabled></label><br><br>
+                        <input class="form__button" type="submit" name="delete" id="delete" value="Eliminar"/>
+                    </div>
+                </div>   
             </div>
-            <table id="matTabla" class="table">
-                <tr>
-                    <td>Nombre</td>
-                    <td>Clav. Materia</td>
-                </tr>
-            </table>
-        </div>
-        <div id="calif" class="tabs">
-            <div class="form">
-                <label class="form__label">No. Control: <input class="form__input" type="text" id="califNum" name="nombre"></label><br><br>
-                <label class="form__label">Clav. Materia: <input class="form__input" type="number" id="califClave" name="nombre"></label><br><br>
-                <label class="form__label">Calificación 1: <input class="form__input" type="number" id="cal1" name="nombre" min="0" max="100"></label><br><br>
-                <label class="form__label">Calificación 2: <input class="form__input" type="number" id="cal2" name="nombre" min="0" max="100"></label><br><br>
-                <label class="form__label">Calificación 3: <input class="form__input" type="number" id="cal3" name="nombre" min="0" max="100"></label><br><br>
-                <input class="form__input form__input--button" type="submit" id="agregarCalif" value="Enviar" name="enviar">
+            <div class="tabs" id="list">
+                <h1>Lista de Agenda</h1>
+                <table class="table" id="listAgenda">
+                </table>
             </div>
-            <table id="califTabla" class="table">
-                <tr>
-                    <td>No. Control</td>
-                    <td>Clav. Materia</td>
-                    <td>Calificación 1</td>
-                    <td>Calificación 2</td>
-                    <td>Calificación 3</td>
-                </tr>
-            </table> 
-        </div>
+        </div>    
     </div>
-    <script src="escuela.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

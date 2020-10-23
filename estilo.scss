@@ -1,93 +1,102 @@
-$letra-tipo: Arial;
-$letra-tam: 14px;
-$tamaño: (100%/3);
+$letra-bar: Times;
+$letra-tam: 20px;
 
-%texto-shared { 
-    font-family: $letra-tipo;
-    font-size: $letra-tam;;
+%text_shared {
+    font-family: $letra-bar;
+    font-size: $letra-tam;
 }
 
-%style-shared {
-    background: rgb(197, 192, 192);
-    font-weight: 700;
+%input_shared {
+    border: none;
+    outline: none;
+    padding: 12px;
 }
 
 body {
-    background: rgb(192, 196, 253);
+    background: rgb(221, 220, 220);
 }
 
 .container {
-    width: 80%; 
-    margin: 0 auto;
+    display: flex;
+    background: whitesmoke;
 
     &__bar {
-        background: white;
-        margin-bottom: 13px;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        background: rgb(245, 233, 212);
+        width: 20%;
     }
 
     &__button {
-        @extend %texto-shared;
-        background: white;
-        border: none;
-        outline:none;
-        padding: 12px;
-        width: $tamaño;
+        @extend %text_shared;
+        background: rgb(245, 233, 212);
+        @extend %input_shared;
         cursor: pointer;
 
         &:hover {
-            @extend %style-shared;
+            background: wheat;
+            font-weight: 700;
         }
+    }
+
+    &__tabs {
+        width: 80%;
     }
 }
 
 .tabs {
     display: none;
-    @extend %texto-shared;
+    margin: 12px;
 
     &--main {
-        display: block; 
+        display: block;
     }
 }
 
 .form {
-    background: rgb(216, 216, 203);
-    padding: 12px;
-    margin-bottom: 12px;
-
     &__label {
-        @extend %texto-shared;
-    } 
+        @extend %text_shared;
+        cursor: pointer;
+    }
 
-    &__input { 
-        @extend %texto-shared;
-        padding: 8px;
-        outline: none;
-        border: 0;
+    &__input {
+        @extend %text_shared;
+        @extend %input_shared;   
+    }
 
-        &--button {
-            width: 20%;
-            background: white;
-            cursor: pointer;
+    &__button {
+        @extend %text_shared;
+        @extend %input_shared;
+        background: rgb(216, 216, 243);
+        width: 20%;
+        cursor: pointer;
 
-            &:hover {
-                @extend %style-shared;
-            }
+        &:hover {
+            font-weight: 700; 
         }
+    }
+
+    &--hidden {
+        display: none;
     }
 }
 
-.table {
-    width: 100%;
-    @extend %style-shared;
-    padding: 12px;
+.anuncio {
+    text-align: center;
+    @extend %text_shared;
+    background: brown;
+    color: white;
+}
 
-    &__td {
-        padding: 12px;
+.table {
+    @extend %text_shared;
+    background: white;
+    width: 100%;
+    &__tr:hover{
+        background: rgb(228, 228, 228);
     }
 
-    &__tr:hover {
-        background: wheat;
+    &__td {
+        height: 50px;
     }
 }

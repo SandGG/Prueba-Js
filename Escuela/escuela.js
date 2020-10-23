@@ -51,7 +51,7 @@ function guardarAlu() {
 
 //Materia
 var agregarMat = document.querySelector('#agregarMat');
-agregarMat.addEventListener("click",capturarMat);
+agregarMat.addEventListener("click", capturarMat);
 var listadoMat = [];
 
 function capturarMat() {

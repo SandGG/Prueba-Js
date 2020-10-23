@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela</title>
+    <link href="estilo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="container__bar">
+            <input type="button" id="button_alu" class="container__button " value="Alumnos">
+            <input type="button" id="button_mat" class="container__button" value="Materia">
+            <input type="button" id="button_calif" class="container__button" value="Calificaciones">
+        </div>
+        <div id="alumnos" class="tabs tabs--main">
+            <div class="form">
+                <label class="form__label">Nombre: <input class="form__input" type="text" id="aluNombre" name="nombre"></label><br><br>
+                <label class="form__label">No. control: <input class="form__input" type="number" id="aluNumControl" name="nombre"></label><br><br>
+                <label class="form__label">Semestre: <input class="form__input" type="number" id="aluSem" name="nombre" min="1" max="12"></label><br><br>
+                <input class="form__input form__input--button" type="submit" id="agregarAlu" value="Enviar" name="enviar">
+            </div>
+            <table id="aluTabla" class="table">
+                <tr>
+                    <td>Nombre</td>
+                    <td>No. Control</td>
+                    <td>Semestre</td>
+                </tr>
+            </table>
+        </div>
+        <div id="materia" class="tabs"> 
+            <div class="form">
+                <label class="form__label">Nombre: <input class="form__input" type="text" id="matNombre" name="nombre"></label><br><br>
+                <label class="form__label">Clav. Materia: <input class="form__input" type="number" id="matClave" name="nombre"></label><br><br>
+                <input class="form__input form__input--button" type="submit" id="agregarMat" value="Enviar" name="enviar">
+            </div>
+            <table id="matTabla" class="table">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Clav. Materia</td>
+                </tr>
+            </table>
+        </div>
+        <div id="calif" class="tabs">
+            <div class="form">
+                <label class="form__label">No. Control: <input class="form__input" type="text" id="califNum" name="nombre"></label><br><br>
+                <label class="form__label">Clav. Materia: <input class="form__input" type="number" id="califClave" name="nombre"></label><br><br>
+                <label class="form__label">Calificación 1: <input class="form__input" type="number" id="cal1" name="nombre" min="0" max="100"></label><br><br>
+                <label class="form__label">Calificación 2: <input class="form__input" type="number" id="cal2" name="nombre" min="0" max="100"></label><br><br>
+                <label class="form__label">Calificación 3: <input class="form__input" type="number" id="cal3" name="nombre" min="0" max="100"></label><br><br>
+                <input class="form__input form__input--button" type="submit" id="agregarCalif" value="Enviar" name="enviar">
+            </div>
+            <table id="califTabla" class="table">
+                <tr>
+                    <td>No. Control</td>
+                    <td>Clav. Materia</td>
+                    <td>Calificación 1</td>
+                    <td>Calificación 2</td>
+                    <td>Calificación 3</td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+    <script src="escuela.js"></script>
+</body>
+</html>

@@ -1,66 +1,78 @@
-.form__input, .form__label, .tabs, .container__button {
-  font-family: Arial;
-  font-size: 14px;
+.table, .anuncio, .form__button, .form__input, .form__label, .container__button {
+  font-family: Times;
+  font-size: 20px;
 }
 
-.table, .form__input--button:hover, .container__button:hover {
-  background: #c5c0c0;
-  font-weight: 700;
-}
-
-body {
-  background: #c0c4fd;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-.container__bar {
-  background: white;
-  margin-bottom: 13px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.container__button {
-  background: white;
+.form__button, .form__input, .container__button {
   border: none;
   outline: none;
   padding: 12px;
-  width: 33.3333333333%;
+}
+
+body {
+  background: #dddcdc;
+}
+
+.container {
+  display: flex;
+  background: whitesmoke;
+}
+.container__bar {
+  display: flex;
+  flex-direction: column;
+  background: #f5e9d4;
+  width: 20%;
+}
+.container__button {
+  background: #f5e9d4;
   cursor: pointer;
 }
+.container__button:hover {
+  background: wheat;
+  font-weight: 700;
+}
+.container__tabs {
+  width: 80%;
+}
+
 .tabs {
   display: none;
+  margin: 12px;
 }
 .tabs--main {
   display: block;
 }
 
-.form {
-  background: #d8d8cb;
-  padding: 12px;
-  margin-bottom: 12px;
-}
-.form__input {
-  padding: 8px;
-  outline: none;
-  border: 0;
-}
-.form__input--button {
-  width: 20%;
-  background: white;
+.form__label {
   cursor: pointer;
 }
-.table {
-  width: 100%;
-  padding: 12px;
+.form__button {
+  background: #d8d8f3;
+  width: 20%;
+  cursor: pointer;
 }
-.table__td {
-  padding: 12px;
+.form__button:hover {
+  font-weight: 700;
+}
+.form--hidden {
+  display: none;
+}
+
+.anuncio {
+  text-align: center;
+  background: brown;
+  color: white;
+}
+
+.table {
+  background: white;
+  width: 100%;
 }
 .table__tr:hover {
-  background: wheat;
+  background: #e4e4e4;
+}
+.table__td {
+  height: 50px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
