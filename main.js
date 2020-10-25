@@ -1,5 +1,5 @@
 const tab_add = document.querySelector('#button_add').addEventListener('click', function() {openTab('agregar')});
-const tab_edit = document.querySelector('#button_edit').addEventListener("click", function() {openTab('editar')});
+const tab_edit = document.querySelector('#button_edit').addEventListener('click', function() {openTab('editar')});
 const tab_delet = document.querySelector('#button_delete').addEventListener('click', function() {openTab('eliminar')});
 const tab_list = document.querySelector('#button_list').addEventListener('click', function() {openTab('list')});
 
@@ -12,7 +12,7 @@ function Agenda (nombre, apellido, telefono, ocupacion) {
     this.ocupacion = ocupacion;
 }
 
-const button_add = document.querySelector('#add').addEventListener('click', () => {
+document.querySelector('#add').addEventListener('click', () => {
     let nombre = document.querySelector('#add_nombre').value;
     let apellido = document.querySelector('#add_apellido').value;
     let telefono = document.querySelector('#add_telefono').value;
@@ -28,7 +28,7 @@ const button_add = document.querySelector('#add').addEventListener('click', () =
     }
 });
 
-const button_search = document.querySelector('#button_search-edit').addEventListener('click', () => {
+document.querySelector('#button_search-edit').addEventListener('click', () => {
     let nombre = document.querySelector('#edit_nombre').value;
     let anun = document.querySelector('.anuncio--edit');
     if (nombre == '') {
@@ -51,7 +51,7 @@ const button_search = document.querySelector('#button_search-edit').addEventList
     } 
 });
 
-const button_delete = document.querySelector('#button_search-delete').addEventListener('click', () => {
+document.querySelector('#button_search-delete').addEventListener('click', () => {
     let nombre = document.querySelector('#delete_nombre').value;
     let anun = document.querySelector('.anuncio--delete');
     if (nombre == '') {
@@ -122,11 +122,9 @@ let openTab = cad => {
 }
 
 let lista = () => {
-
     document.querySelector('#listAgenda').innerHTML = '<tr><td>Nombre</td><td>Apellido</td><td>Telefono</td><td>Ocupación</td></tr>';
 
     for (let i = 0; i < listAgenda.length; i++) {
-        console.log('entra');
         let nombre = listAgenda[i].nombre;
         let apellido = listAgenda[i].apellido;
         let telefono = listAgenda[i].telefono;
