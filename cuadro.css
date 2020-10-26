@@ -17,6 +17,11 @@ body {
   height: 20px;
   left: 0px;
   top: 0px;
+  z-index: 1;
+}
+.container__cuadro--main {
+  z-index: 2;
+  border: 1px solid black;
 }
 
 /*# sourceMappingURL=cuadro.css.map */
