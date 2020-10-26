@@ -24,10 +24,10 @@ document.querySelector('#button--event').addEventListener('click', () => {
     }); 
 });
 
-document.querySelector('#button--prueba').addEventListener('click', () => {
+/*document.querySelector('#button--prueba').addEventListener('click', () => {
     if () {
         document.querySelector('.modal__text').innerHTML = 'Usando target'
     } else {
         document.querySelector('.modal__text').innerHTML = 'Usando stopPropagation'
     }
-});
+});*/
