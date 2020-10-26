@@ -1,102 +1,58 @@
-$letra-bar: Times;
-$letra-tam: 20px;
+$letra-tipo: Arial;
+$letra-tam: 16px;
 
-%text_shared {
-    font-family: $letra-bar;
+%text-shared {
+    font-family: $letra-tipo;
     font-size: $letra-tam;
 }
 
-%input_shared {
+body {
+    background: rgb(238, 211, 215);
+}
+
+.button {
+    @extend %text-shared;
+    background: white;
+    padding: 12px;
     border: none;
     outline: none;
-    padding: 12px;
+    cursor: pointer;
+
+    &:hover {
+        background: wheat;
+    }
 }
 
-body {
-    background: rgb(221, 220, 220);
-}
+.modal {
+    display: none; 
+    position: absolute; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.4); 
 
-.container {
-    display: flex;
-    background: whitesmoke;
-
-    &__bar {
-        display: flex;
-        flex-direction: column;
-        background: rgb(245, 233, 212);
-        width: 20%;
-    }
-
-    &__button {
-        @extend %text_shared;
-        background: rgb(245, 233, 212);
-        @extend %input_shared;
-        cursor: pointer;
-
-        &:hover {
-            background: wheat;
-            font-weight: 700;
-        }
-    }
-
-    &__tabs {
+    &__container {
+        background: pink;
+        margin: auto;
+        padding: 20px;
         width: 80%;
     }
-}
 
-.tabs {
-    display: none;
-    margin: 12px;
-
-    &--main {
-        display: block;
+    &__text {
+        @extend %text-shared;
     }
 }
 
-.form {
-    &__label {
-        @extend %text_shared;
-        cursor: pointer;
-    }
+.close {
+    color: #9b9797;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
 
-    &__input {
-        @extend %text_shared;
-        @extend %input_shared;   
-    }
-
-    &__button {
-        @extend %text_shared;
-        @extend %input_shared;
-        background: rgb(216, 216, 243);
-        width: 20%;
-        cursor: pointer;
-
-        &:hover {
-            font-weight: 700; 
-        }
-    }
-
-    &--hidden {
-        display: none;
-    }
-}
-
-.anuncio {
-    text-align: center;
-    @extend %text_shared;
-    background: brown;
-    color: white;
-}
-
-.table {
-    @extend %text_shared;
-    background: white;
-    width: 100%;
-    &__tr:hover{
-        background: rgb(228, 228, 228);
-    }
-
-    &__td {
-        height: 50px;
+    &:hover {
+        color: black; 
     }
 }

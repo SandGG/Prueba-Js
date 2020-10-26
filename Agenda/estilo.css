@@ -1,0 +1,78 @@
+.table, .anuncio, .form__button, .form__input, .form__label, .container__button {
+  font-family: Times;
+  font-size: 20px;
+}
+
+.form__button, .form__input, .container__button {
+  border: none;
+  outline: none;
+  padding: 12px;
+}
+
+body {
+  background: #dddcdc;
+}
+
+.container {
+  display: flex;
+  background: whitesmoke;
+}
+.container__bar {
+  display: flex;
+  flex-direction: column;
+  background: #f5e9d4;
+  width: 20%;
+}
+.container__button {
+  background: #f5e9d4;
+  cursor: pointer;
+}
+.container__button:hover {
+  background: wheat;
+  font-weight: 700;
+}
+.container__tabs {
+  width: 80%;
+}
+
+.tabs {
+  display: none;
+  margin: 12px;
+}
+.tabs--main {
+  display: block;
+}
+
+.form__label {
+  cursor: pointer;
+}
+.form__button {
+  background: #d8d8f3;
+  width: 20%;
+  cursor: pointer;
+}
+.form__button:hover {
+  font-weight: 700;
+}
+.form--hidden {
+  display: none;
+}
+
+.anuncio {
+  text-align: center;
+  background: brown;
+  color: white;
+}
+
+.table {
+  background: white;
+  width: 100%;
+}
+.table__tr:hover {
+  background: #e4e4e4;
+}
+.table__td {
+  height: 50px;
+}
+
+/*# sourceMappingURL=estilo.css.map */

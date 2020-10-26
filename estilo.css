@@ -1,78 +1,48 @@
-.table, .anuncio, .form__button, .form__input, .form__label, .container__button {
-  font-family: Times;
-  font-size: 20px;
-}
-
-.form__button, .form__input, .container__button {
-  border: none;
-  outline: none;
-  padding: 12px;
+.modal__text, .button {
+  font-family: Arial;
+  font-size: 16px;
 }
 
 body {
-  background: #dddcdc;
+  background: #eed3d7;
 }
 
-.container {
-  display: flex;
-  background: whitesmoke;
-}
-.container__bar {
-  display: flex;
-  flex-direction: column;
-  background: #f5e9d4;
-  width: 20%;
-}
-.container__button {
-  background: #f5e9d4;
+.button {
+  background: white;
+  padding: 12px;
+  border: none;
+  outline: none;
   cursor: pointer;
 }
-.container__button:hover {
+.button:hover {
   background: wheat;
-  font-weight: 700;
 }
-.container__tabs {
+
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.modal__container {
+  background: pink;
+  margin: auto;
+  padding: 20px;
   width: 80%;
 }
-
-.tabs {
-  display: none;
-  margin: 12px;
-}
-.tabs--main {
-  display: block;
-}
-
-.form__label {
+.close {
+  color: #9b9797;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
   cursor: pointer;
 }
-.form__button {
-  background: #d8d8f3;
-  width: 20%;
-  cursor: pointer;
-}
-.form__button:hover {
-  font-weight: 700;
-}
-.form--hidden {
-  display: none;
-}
-
-.anuncio {
-  text-align: center;
-  background: brown;
-  color: white;
-}
-
-.table {
-  background: white;
-  width: 100%;
-}
-.table__tr:hover {
-  background: #e4e4e4;
-}
-.table__td {
-  height: 50px;
+.close:hover {
+  color: black;
 }
 
 /*# sourceMappingURL=estilo.css.map */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="estilo.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="container__bar">
+            <input type="button" id="button_add" class="container__button " value="Agregar">
+            <input type="button" id="button_edit" class="container__button" value="Editar">
+            <input type="button" id="button_delete" class="container__button" value="Eliminar">
+            <input type="button" id="button_list" class="container__button" value="Listar">
+        </div>
+        <div class="container__tabs">
+            <div class="tabs tabs--main" id="agregar">
+                <h1>AGREGAR</h1>
+                <p class="anuncio anuncio--add"></p>
+                <div class="form">
+                    <label class="form__label">Nombre: <input class="form__input" type="text" id="add_nombre" name="nombre" placeholder="Ingresa el nombre"></label><br><br>
+                    <label class="form__label">Apellido: <input class="form__input" type="text" id="add_apellido" name="apellido" placeholder="Ingresa el apellido"></label><br><br>
+                    <label class="form__label">Telefono: <input class="form__input" type="number" id="add_telefono" name="telefono" placeholder="Ingresa el telefono"></label><br><br>
+                    <label class="form__label">Ocupación: <input class="form__input" type="text" id="add_ocupacion" name="ocupacion" placeholder="Ingresa la ocupación"></label><br><br>
+                    <input class="form__button" type="submit" name="add" id="add" value="Agregar"/> 
+                </div>
+                </div>
+            <div class="tabs" id="editar">
+                <h1>EDITAR</h1>
+                <p class="anuncio anuncio--edit"></p>
+                <div class="form">
+                    <label class="form__label">Nombre: <input class="form__input" type="text" id="edit_nombre" name="nombre" placeholder="Ingresa el nombre"></label><br><br>
+                    <input class="form__button" id="button_search-edit" type="submit" name="search" value="Buscar">
+                    <div class="form form--hidden" id="edit_edit">
+                        <label class="form__label">Apellido: <input class="form__input" type="text" id="edit_apellido" name="apellido" placeholder="Ingresa el apellido"></label><br><br>
+                        <label class="form__label">Telefono: <input class="form__input" type="number" id="edit_telefono" name="telefono" placeholder="Ingresa el telefono"></label><br><br>
+                        <label class="form__label">Ocupación: <input class="form__input" type="text" id="edit_ocupacion" name="ocupacion" placeholder="Ingresa la ocupación"></label><br><br>
+                        <input class="form__button" type="submit" name="edit" id="edit" value="Editar"/>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs" id="eliminar">
+                <h1>ELIMINAR</h1>
+                <p class="anuncio anuncio--delete"></p>
+                <div class="form">
+                    <label class="form__label">Nombre: <input class="form__input" type="text" id="delete_nombre" name="nombre" placeholder="Ingresa el nombre"></label><br><br>
+                    <input class="form__button" id="button_search-delete" type="submit" value="Buscar">
+                    <div class="form form--hidden" id="delete_delete">
+                        <label class="form__label">Apellido: <input class="form__input" type="text" id="delete_apellido" name="apellido" placeholder="Ingresa el apellido" disabled></label><br><br>
+                        <label class="form__label">Telefono: <input class="form__input" type="number" id="delete_telefono" name="telefono" placeholder="Ingresa el telefono" disabled></label><br><br>
+                        <label class="form__label">Ocupación: <input class="form__input" type="text" id="delete_ocupacion" name="ocupacion" placeholder="Ingresa la ocupación" disabled></label><br><br>
+                        <input class="form__button" type="submit" name="delete" id="delete" value="Eliminar"/>
+                    </div>
+                </div>   
+            </div>
+            <div class="tabs" id="list">
+                <h1>Lista de Agenda</h1>
+                <table class="table" id="listAgenda">
+                </table>
+            </div>
+        </div>    
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

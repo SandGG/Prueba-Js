@@ -1,0 +1,102 @@
+$letra-bar: Times;
+$letra-tam: 20px;
+
+%text_shared {
+    font-family: $letra-bar;
+    font-size: $letra-tam;
+}
+
+%input_shared {
+    border: none;
+    outline: none;
+    padding: 12px;
+}
+
+body {
+    background: rgb(221, 220, 220);
+}
+
+.container {
+    display: flex;
+    background: whitesmoke;
+
+    &__bar {
+        display: flex;
+        flex-direction: column;
+        background: rgb(245, 233, 212);
+        width: 20%;
+    }
+
+    &__button {
+        @extend %text_shared;
+        background: rgb(245, 233, 212);
+        @extend %input_shared;
+        cursor: pointer;
+
+        &:hover {
+            background: wheat;
+            font-weight: 700;
+        }
+    }
+
+    &__tabs {
+        width: 80%;
+    }
+}
+
+.tabs {
+    display: none;
+    margin: 12px;
+
+    &--main {
+        display: block;
+    }
+}
+
+.form {
+    &__label {
+        @extend %text_shared;
+        cursor: pointer;
+    }
+
+    &__input {
+        @extend %text_shared;
+        @extend %input_shared;   
+    }
+
+    &__button {
+        @extend %text_shared;
+        @extend %input_shared;
+        background: rgb(216, 216, 243);
+        width: 20%;
+        cursor: pointer;
+
+        &:hover {
+            font-weight: 700; 
+        }
+    }
+
+    &--hidden {
+        display: none;
+    }
+}
+
+.anuncio {
+    text-align: center;
+    @extend %text_shared;
+    background: brown;
+    color: white;
+}
+
+.table {
+    @extend %text_shared;
+    background: white;
+    width: 100%;
+    &__tr:hover{
+        background: rgb(228, 228, 228);
+    }
+
+    &__td {
+        height: 50px;
+    }
+}
