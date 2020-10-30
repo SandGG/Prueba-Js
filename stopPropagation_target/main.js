@@ -21,7 +21,7 @@ function modalTarget () {
 
 document.querySelector('#button--event').addEventListener('click', () => {
     ban = false;
-    document.querySelector('#modal').style = 'display: flex; align-items: center;';
+    document.querySelector('#modal').style.display = 'flex';
     modalEvent();
 });
 
