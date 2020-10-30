@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="cuadro.css" rel="stylesheet" type="text/css">
+    <link href="estilo.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container">
-        <div class="container__cuadro container__cuadro--main" id="cuadro"></div>
+    <input class="button" id="button--target" type="button" value="Boton con target" name="boton">
+    <input class="button" id="button--event" type="button" value="Boton con evento" name="boton">
+
+    <div class="modal" id="modal">
+        <div class="modal__container">
+            <span class="close">&times;</span>
+            <p class="modal__text">Texto del modal</p>
+            <input class="button" id="button--prueba" type="button" value="Pruebame" name="boton">
+        </div>
     </div>
-    <script src="cuadro.js"></script>
+
+    <script src="main.js"></script>
 </body>
 </html>
